@@ -16,4 +16,4 @@ This Project is Submission for Jarvis Bootcamp: Web Developer with Laravel.
 # Team #
 - Muhammad Azmi Fauzi (Backend) https://github.com/azmifauzy/
 - Sabiq Muhammad (Frontend) https://github.com/sabiq7392
-- Muhammad Alfatih (UI/UX Design)
+- Alfatih Abdurrahman (UI/UX Design) https://github.com/abduromanov2020
