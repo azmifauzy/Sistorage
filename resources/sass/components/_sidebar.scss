@@ -1,0 +1,59 @@
+@import './min-max-sidebar';
+
+#sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: $gap-xxl;
+
+  position: fixed;
+  top: 0;
+  z-index: 90;  
+  
+  // min-height: 100vh;
+  height: 100vh;
+  width: 300px;
+
+  background: $linear-gradient-default;
+  transition: width $transition-fast;
+
+  overflow-y: auto;
+  &.minimize {
+    width: 90px!important;
+    .menu a span {
+      display: none;
+    }
+  }
+
+  h1.brand {
+    font-size: 48px;
+    color: $color-dark;
+    padding: $padding-sm $padding-md;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+    gap: $gap-sm;
+    a {
+      display: flex;
+      gap: $gap-md;
+
+      font-size: 20px;
+      font-weight: 600;
+      color: $color-dark;
+
+      width: 90%;
+      padding: $padding-sm $padding-md;
+
+      border-top-right-radius: 30px;
+      border-bottom-right-radius: 30px;
+
+      transition: background-color $transition-normal;
+      &.active, &:hover {
+        background-color: white;
+        box-shadow: $shadow-default;
+      }
+    }
+  }
+}
+

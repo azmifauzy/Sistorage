@@ -1,0 +1,23 @@
+#navbar {
+
+  background: $color-light;
+  padding: $padding-sm $padding-lg;
+
+  margin-left: $sidebar-size-max;
+  transition: margin-left $transition-fast;
+  &.maximize {
+    margin-left: $sidebar-size-min;
+  }
+  h2 {
+    font-size: 30px;
+    color: $color-dark;
+  }
+
+  p {
+    font-family: $font-secondary;
+  }
+
+  img {
+    height: 50px;
+  }
+}

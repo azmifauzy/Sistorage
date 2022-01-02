@@ -1,0 +1,11 @@
+@mixin place-center($display) {
+  display: $display;
+  @if $display == flex {
+    justify-content: center;
+    align-items: center;
+  }
+
+  @else if $display == grid {
+    place-items: center;
+  }
+}

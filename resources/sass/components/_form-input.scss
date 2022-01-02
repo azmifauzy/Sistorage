@@ -1,0 +1,70 @@
+.form-input {
+  @import '../components/show-hide-password';
+  @import '../components/switch-login-register';
+  @include place-center(grid);
+  flex: 4;
+  background: $linear-gradient-default;
+  .card {
+    display: grid;
+    gap: $gap-xxl;
+
+    width: 100%;
+    max-width: 500px!important;
+    padding: $padding-md;
+
+    box-shadow: $shadow-default;
+    border-radius: $radius-xxl;
+
+    background-color: white;
+    form#formInput {
+      display: grid;
+      gap: $gap-xl;
+      .input-container {
+        display: grid;
+        position: relative;
+        label {
+          position: absolute;
+          top: 10px;
+          left: 10px;
+      
+          transition: $transition-fast;
+      
+          font-size: 16px;
+          font-weight: 400;
+          color: $color-dark;
+          letter-spacing: 0.3px;
+          &.active {
+            top: -8px;
+            background-color: white;
+            font-size: 11px;
+            padding: 0 0.5rem;
+          }
+        }
+        .show-hide-password {
+          display: flex;
+        }
+      }
+    
+      input:not(input[type="search"]), 
+      select {
+        background-color: $background-input;
+        padding: 0 0.7rem;
+        border-radius: $radius-sm;
+        &.active {
+          border: 1px solid $color-primary;
+          background: white;
+        }
+      }
+      
+      button[type="submit"] {
+        border-radius: $radius-sm;
+        background-color: $color-primary;
+    
+        font-size: 18px;
+        font-weight: 600;
+        color: $color-dark;
+      }
+    }
+  }
+}
+

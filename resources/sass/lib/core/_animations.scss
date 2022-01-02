@@ -1,0 +1,24 @@
+@mixin animation(
+  $duration: 1s, 
+  $timing: ease, 
+  $delay: 0s,
+  $iteration: 1, 
+  $direction: normal, 
+  $fill-mode: none, 
+  $play-state: running
+) {
+  $name: animation-#{unique-id()};
+
+  @keyframes #{$name} {
+    @content;
+  }
+
+  animation-name: $name;
+  animation-duration: $duration;
+  animation-timing-function: $timing;
+  animation-delay: $delay;
+  animation-iteration-count: $iteration;
+  animation-direction: $direction;
+  animation-fill-mode: $fill-mode;
+  animation-play-state: $play-state;
+}

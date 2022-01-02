@@ -1,0 +1,866 @@
+@import url("https://fonts.googleapis.com/css2?family=Kulim+Park:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+.card-bigest {
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+  padding: 2rem;
+  box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.05);
+  background: white;
+  border-radius: 20px;
+  flex: 7;
+}
+
+.text-dark {
+  color: #573F4C;
+}
+
+.text-primary {
+  color: #B9A6E0;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.bg-white {
+  background-color: white;
+}
+
+.bg-none {
+  background: unset !important;
+}
+
+.container {
+  width: 100%;
+  margin: auto;
+}
+@media only screen and (min-width: 576px) {
+  .container {
+    max-width: 100%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+}
+
+.container-fluid {
+  max-width: 100%;
+  padding: 0 36px;
+}
+
+.d-none {
+  display: none;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.d-grid {
+  display: grid;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.gap-sm {
+  gap: 5px;
+}
+
+.gap-md {
+  gap: 10px;
+}
+
+.gap-lg {
+  gap: 15px;
+}
+
+.gap-xl {
+  gap: 20px;
+}
+
+.h-100vh {
+  height: 100vh;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.justify-content-end {
+  justify-content: end;
+}
+
+.m-auto {
+  margin: auto;
+}
+
+.p-sm {
+  padding: 1rem;
+}
+
+.p-md {
+  padding: 2rem;
+}
+
+.p-lg {
+  padding: 3rem;
+}
+
+.p-xl {
+  padding: 4rem;
+}
+
+.place-items-center {
+  place-items: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.radius-sm {
+  border-radius: 5px;
+}
+
+.radius-md {
+  border-radius: 10px;
+}
+
+.radius-lg {
+  border-radius: 15px;
+}
+
+.radius-xl {
+  border-radius: 20px;
+}
+
+.radius-xxl {
+  border-radius: 25px;
+}
+
+.radius-xxxl {
+  border-radius: 30px;
+}
+
+.shadow-lg {
+  box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.05);
+}
+
+/*
+  Mame.scss
+  Make your code simple, readble and easy to maintain
+
+  Author: Sabiq Muhammad Antebing Mame;
+  Contact: sabiqmuhammad98@gmail.com;
+  Github: sabiq7392;
+*/
+#minMaxSidebar {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 280px;
+  border-radius: 50%;
+  font-size: 18px;
+  box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.05);
+  transition: transform 200ms;
+  z-index: 100;
+  cursor: pointer;
+}
+#minMaxSidebar.active {
+  transform: rotate(180deg) translateY(22px) translateX(200px);
+}
+
+#sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  position: fixed;
+  top: 0;
+  z-index: 90;
+  height: 100vh;
+  width: 300px;
+  background: linear-gradient(178.23deg, #F3D7EC 40.94%, #B9A6E0 135.81%);
+  transition: width 200ms;
+  overflow-y: auto;
+}
+#sidebar.minimize {
+  width: 90px !important;
+}
+#sidebar.minimize .menu a span {
+  display: none;
+}
+#sidebar h1.brand {
+  font-size: 48px;
+  color: #573F4C;
+  padding: 1rem 2rem;
+}
+#sidebar .menu {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+#sidebar .menu a {
+  display: flex;
+  gap: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #573F4C;
+  width: 90%;
+  padding: 1rem 2rem;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  transition: background-color 400ms;
+}
+#sidebar .menu a.active, #sidebar .menu a:hover {
+  background-color: white;
+  box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.05);
+}
+
+#navbar {
+  background: rgba(234, 201, 226, 0.6);
+  padding: 1rem 3rem;
+  margin-left: 300px;
+  transition: margin-left 200ms;
+}
+#navbar.maximize {
+  margin-left: 90px;
+}
+#navbar h2 {
+  font-size: 30px;
+  color: #573F4C;
+}
+#navbar p {
+  font-family: "Kulim Park", sans-serif;
+}
+#navbar img {
+  height: 50px;
+}
+
+.card {
+  box-shadow: none !important;
+}
+.card h3 {
+  font-weight: bold;
+  color: #573F4C;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  border: none;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(87, 63, 76, 0.7);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-corner {
+  background: #aaaaaa;
+}
+
+*:focus {
+  border-color: #B9A6E0;
+  outline-color: #B9A6E0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+input, button, a, select {
+  min-height: 44px;
+  min-width: 44px;
+  border: none;
+}
+
+main#main {
+  min-height: 100vh;
+  margin-left: 300px;
+  background: rgba(234, 201, 226, 0.6);
+  transition: margin-left 200ms;
+  padding: 3rem;
+}
+main#main.maximize {
+  margin-left: 90px;
+}
+
+p {
+  margin-bottom: 0 !important;
+}
+
+#authContainer .greeting {
+  display: grid;
+  place-items: center;
+  background-color: rgba(234, 201, 226, 0.6);
+  flex: 5;
+}
+#authContainer .greeting h1 {
+  font-size: 60px;
+  text-align: center;
+  color: #B9A6E0;
+  font-family: "Kulim Park", sans-serif;
+}
+@media only screen and (max-width: 1023px) {
+  #authContainer .greeting h1 {
+    font-size: 50px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  #authContainer .greeting h1 {
+    font-size: 35px;
+  }
+}
+#authContainer .greeting img {
+  width: 600px;
+}
+@media only screen and (max-width: 1023px) {
+  #authContainer .greeting img {
+    width: 500px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  #authContainer .greeting img {
+    width: 350px;
+  }
+}
+#authContainer .form-input {
+  display: grid;
+  place-items: center;
+  flex: 4;
+  background: linear-gradient(178.23deg, #F3D7EC 40.94%, #B9A6E0 135.81%);
+}
+#authContainer .form-input button#showHidePassword {
+  position: absolute;
+  right: 0;
+  font-size: 18px;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  cursor: pointer;
+}
+#authContainer .form-input .switch {
+  display: flex;
+  background-color: white;
+  box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.05);
+  border-radius: 30px;
+}
+#authContainer .form-input .switch a.login, #authContainer .form-input .switch a.register {
+  display: grid;
+  place-items: center;
+  font-size: 18px;
+  font-weight: 600;
+  color: #B9A6E0;
+  letter-spacing: 0.3px;
+  flex: 2;
+  border-radius: inherit;
+  background-color: white;
+}
+#authContainer .form-input .switch a.login.active, #authContainer .form-input .switch a.register.active {
+  background-color: rgba(185, 166, 224, 0.4);
+  color: #573F4C;
+  flex: 3;
+}
+#authContainer .form-input .card {
+  display: grid;
+  gap: 25px;
+  width: 100%;
+  max-width: 500px !important;
+  padding: 2rem;
+  box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+  background-color: white;
+}
+#authContainer .form-input .card form#formInput {
+  display: grid;
+  gap: 20px;
+}
+#authContainer .form-input .card form#formInput .input-container {
+  display: grid;
+  position: relative;
+}
+#authContainer .form-input .card form#formInput .input-container label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  transition: 200ms;
+  font-size: 16px;
+  font-weight: 400;
+  color: #573F4C;
+  letter-spacing: 0.3px;
+}
+#authContainer .form-input .card form#formInput .input-container label.active {
+  top: -8px;
+  background-color: white;
+  font-size: 11px;
+  padding: 0 0.5rem;
+}
+#authContainer .form-input .card form#formInput .input-container .show-hide-password {
+  display: flex;
+}
+#authContainer .form-input .card form#formInput input:not(input[type=search]),
+#authContainer .form-input .card form#formInput select {
+  background-color: rgba(185, 166, 224, 0.33);
+  padding: 0 0.7rem;
+  border-radius: 4px;
+}
+#authContainer .form-input .card form#formInput input:not(input[type=search]).active,
+#authContainer .form-input .card form#formInput select.active {
+  border: 1px solid #B9A6E0;
+  background: white;
+}
+#authContainer .form-input .card form#formInput button[type=submit] {
+  border-radius: 4px;
+  background-color: #B9A6E0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #573F4C;
+}
+
+@media only screen and (max-width: 1023px) {
+  #dashboard article#cashierApplicationSystem img.cashier-app-system {
+    width: 250px;
+  }
+}
+#dashboard article#cashierApplicationSystem div.cashier-app-system-container {
+  display: grid;
+  gap: 10px;
+}
+#dashboard article#cashierApplicationSystem div.cashier-app-system-container h3 {
+  font-size: 36px;
+  color: #573F4C;
+}
+#dashboard article#cashierApplicationSystem div.cashier-app-system-container a#goToCashier {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #573F4C;
+  color: #B9A6E0;
+  font-weight: bold;
+  border-radius: 30px;
+}
+#dashboard article#cashierApplicationSystem div.cashier-app-system-container a#goToCashier:hover {
+  filter: brightness(110%);
+}
+#dashboard article#cashierApplicationSystem div.cashier-app-system-container a#goToCashier:hover img {
+  transform: translateX(20px);
+}
+#dashboard article#cashierApplicationSystem div.cashier-app-system-container a#goToCashier img.icon-arrow-go-to-cashier {
+  width: 28px;
+  height: 24px;
+  transition: 200ms;
+}
+#dashboard article#recentActivity {
+  display: grid;
+  gap: 20px;
+  flex: 6;
+}
+#dashboard article#recentActivity form#formSearch {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  border-radius: 30px;
+  box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0);
+}
+#dashboard article#recentActivity form#formSearch.active {
+  border: 1px solid #B9A6E0;
+}
+#dashboard article#recentActivity form#formSearch input[type=search] {
+  flex-grow: 5;
+  padding: 0 1rem;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+#dashboard article#recentActivity form#formSearch input[type=search]:focus {
+  outline: none;
+}
+#dashboard article#recentActivity form#formSearch input[type=search]::placeholder {
+  color: #B9A6E0;
+  font-size: 14px;
+}
+#dashboard article#recentActivity form#formSearch button[type=submit] {
+  background: white;
+  flex-grow: 1;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+#dashboard article#recentActivity section {
+  display: grid;
+  gap: 10px;
+  background: white;
+  box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+  padding: 2rem;
+}
+#dashboard article#recentActivity section h3 {
+  color: #B9A6E0;
+  font-size: 24px;
+}
+#dashboard article#recentActivity section .activity-container {
+  display: grid;
+  gap: 5px;
+  height: 160px;
+  overflow-y: auto;
+}
+#dashboard article#recentActivity section .activity-container .activity {
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px;
+  padding: 2px;
+  background: white;
+  cursor: pointer;
+}
+#dashboard article#recentActivity section .activity-container .activity:hover {
+  filter: brightness(90%);
+}
+#dashboard article#recentActivity section .activity-container .activity p {
+  font-weight: 500;
+  color: #573F4C;
+}
+#dashboard article#recentActivity section .activity-container .activity time {
+  color: #B9A6E0;
+}
+#dashboard #menu {
+  display: grid;
+  gap: 10px;
+  background: linear-gradient(180deg, #FFFFFF -15.13%, rgba(255, 255, 255, 0) 116.75%);
+  box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.05);
+  padding: 2rem;
+  border-radius: 20px;
+}
+#dashboard #menu h3 {
+  font-size: 24px;
+  color: #573F4C;
+}
+#dashboard #menu a {
+  display: grid;
+  position: relative;
+  flex: 1;
+  border-radius: 30px;
+  padding: 2rem;
+  background: white;
+  background-image: url("../images/wave-1.png");
+  background-repeat: no-repeat;
+  background-position: bottom right;
+}
+#dashboard #menu a:hover {
+  filter: brightness(90%);
+}
+#dashboard #menu a span {
+  font-size: 30px;
+  font-weight: bold;
+  color: #573F4C;
+}
+#dashboard #menu a img {
+  justify-self: end;
+}
+
+#items #goToAddForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  background-color: #573F4C;
+  color: white;
+  padding: 0 1rem;
+  border-radius: 30px;
+  cursor: pointer;
+}
+#items #goToAddForm:hover {
+  filter: brightness(90%);
+}
+#items .table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: auto;
+  max-height: 1000px;
+}
+#items .table thead {
+  background-color: #B9A6E0;
+}
+#items .table thead th {
+  padding: 5px;
+  color: #573F4C;
+}
+#items .table tbody {
+  background-color: white;
+}
+#items .table tbody td {
+  padding: 0 5px;
+  color: #573F4C;
+}
+#items .table tbody td a, #items .table tbody td button {
+  display: grid;
+  place-items: center;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 200ms;
+  background-color: rgba(0, 0, 0, 0);
+}
+#items .table tbody td a[aria-label=edit], #items .table tbody td button[aria-label=edit] {
+  color: #ff9f43;
+}
+#items .table tbody td a[aria-label=delete], #items .table tbody td button[aria-label=delete] {
+  color: #ee5253;
+}
+#items .table tbody td a:hover, #items .table tbody td button:hover {
+  border: 1px solid #B9A6E0;
+}
+#items .table tbody td a i, #items .table tbody td button i {
+  display: inline-block;
+}
+#items .table tfoot {
+  background-color: #B9A6E0;
+}
+#items .table tfoot td {
+  padding: 5px;
+  color: #573F4C;
+}
+#items .dataTables_wrapper .dataTables_length label, #items .dataTables_wrapper .dataTables_filter label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #573F4C;
+}
+#items .dataTables_wrapper .dataTables_length select {
+  max-width: 100px;
+  border-radius: 10px;
+}
+#items .dataTables_wrapper .dataTables_filter input {
+  border-radius: 10px;
+}
+#items .dataTables_wrapper .paginate_button.active a {
+  background-color: #B9A6E0 !important;
+  border-color: #B9A6E0;
+}
+#items .form-input {
+  display: grid;
+  place-items: center;
+  flex: 4;
+  background: linear-gradient(178.23deg, #F3D7EC 40.94%, #B9A6E0 135.81%);
+}
+#items .form-input button#showHidePassword {
+  position: absolute;
+  right: 0;
+  font-size: 18px;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  cursor: pointer;
+}
+#items .form-input .switch {
+  display: flex;
+  background-color: white;
+  box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.05);
+  border-radius: 30px;
+}
+#items .form-input .switch a.login, #items .form-input .switch a.register {
+  display: grid;
+  place-items: center;
+  font-size: 18px;
+  font-weight: 600;
+  color: #B9A6E0;
+  letter-spacing: 0.3px;
+  flex: 2;
+  border-radius: inherit;
+  background-color: white;
+}
+#items .form-input .switch a.login.active, #items .form-input .switch a.register.active {
+  background-color: rgba(185, 166, 224, 0.4);
+  color: #573F4C;
+  flex: 3;
+}
+#items .form-input .card {
+  display: grid;
+  gap: 25px;
+  width: 100%;
+  max-width: 500px !important;
+  padding: 2rem;
+  box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+  background-color: white;
+}
+#items .form-input .card form#formInput {
+  display: grid;
+  gap: 20px;
+}
+#items .form-input .card form#formInput .input-container {
+  display: grid;
+  position: relative;
+}
+#items .form-input .card form#formInput .input-container label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  transition: 200ms;
+  font-size: 16px;
+  font-weight: 400;
+  color: #573F4C;
+  letter-spacing: 0.3px;
+}
+#items .form-input .card form#formInput .input-container label.active {
+  top: -8px;
+  background-color: white;
+  font-size: 11px;
+  padding: 0 0.5rem;
+}
+#items .form-input .card form#formInput .input-container .show-hide-password {
+  display: flex;
+}
+#items .form-input .card form#formInput input:not(input[type=search]),
+#items .form-input .card form#formInput select {
+  background-color: rgba(185, 166, 224, 0.33);
+  padding: 0 0.7rem;
+  border-radius: 4px;
+}
+#items .form-input .card form#formInput input:not(input[type=search]).active,
+#items .form-input .card form#formInput select.active {
+  border: 1px solid #B9A6E0;
+  background: white;
+}
+#items .form-input .card form#formInput button[type=submit] {
+  border-radius: 4px;
+  background-color: #B9A6E0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #573F4C;
+}
+#items .card-bigest h3 {
+  color: #573F4C;
+}
+#items .card-bigest p {
+  font-size: 30px;
+}
+#items .card-bigest span {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+#categories .table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: auto;
+  max-height: 1000px;
+}
+#categories .table thead {
+  background-color: #B9A6E0;
+}
+#categories .table thead th {
+  padding: 5px;
+  color: #573F4C;
+}
+#categories .table tbody {
+  background-color: white;
+}
+#categories .table tbody td {
+  padding: 0 5px;
+  color: #573F4C;
+}
+#categories .table tbody td a, #categories .table tbody td button {
+  display: grid;
+  place-items: center;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 200ms;
+  background-color: rgba(0, 0, 0, 0);
+}
+#categories .table tbody td a[aria-label=edit], #categories .table tbody td button[aria-label=edit] {
+  color: #ff9f43;
+}
+#categories .table tbody td a[aria-label=delete], #categories .table tbody td button[aria-label=delete] {
+  color: #ee5253;
+}
+#categories .table tbody td a:hover, #categories .table tbody td button:hover {
+  border: 1px solid #B9A6E0;
+}
+#categories .table tbody td a i, #categories .table tbody td button i {
+  display: inline-block;
+}
+#categories .table tfoot {
+  background-color: #B9A6E0;
+}
+#categories .table tfoot td {
+  padding: 5px;
+  color: #573F4C;
+}
+#categories #goToAddForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  background-color: #573F4C;
+  color: white;
+  padding: 0 1rem;
+  border-radius: 30px;
+  cursor: pointer;
+}
+#categories #goToAddForm:hover {
+  filter: brightness(90%);
+}
+#categories .dataTables_wrapper .dataTables_length label, #categories .dataTables_wrapper .dataTables_filter label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #573F4C;
+}
+#categories .dataTables_wrapper .dataTables_length select {
+  max-width: 100px;
+  border-radius: 10px;
+}
+#categories .dataTables_wrapper .dataTables_filter input {
+  border-radius: 10px;
+}
+#categories .dataTables_wrapper .paginate_button.active a {
+  background-color: #B9A6E0 !important;
+  border-color: #B9A6E0;
+}
+#categories .card {
+  border-radius: 30px;
+}
+
+/*# sourceMappingURL=index.css.map */

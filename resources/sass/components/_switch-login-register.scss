@@ -1,0 +1,25 @@
+.switch {
+  $radius-half-circle: 30px;
+
+  display: flex;
+
+  background-color: white;
+  box-shadow: $shadow-default;
+  border-radius: $radius-half-circle;
+  a.login, a.register {
+    @include place-center(grid);
+    font-size: $sub-heading;
+    font-weight: 600;
+    color: $color-primary;
+    letter-spacing: 0.3px;
+    flex: 2;
+
+    border-radius: inherit;
+    background-color: white;
+    &.active {
+      background-color: rgba($color-primary, 0.4);
+      color: $color-dark;
+      flex: 3;
+    }
+  }
+}

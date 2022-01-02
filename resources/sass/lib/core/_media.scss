@@ -1,0 +1,75 @@
+@mixin media($breakpoint) {
+	@if $breakpoint == 'phone' {
+		@media only screen and (max-width: 767px) {
+			@content;
+		}
+	}
+	@else if  $breakpoint == 'tablet' {
+		@media only screen and (max-width: 1023px) {
+			@content;
+		}
+	}
+	@else if $breakpoint == 'desktop' {
+		@media only screen and (min-width: 1024px) {
+			@content;
+		}
+	}
+	@else if $breakpoint == 'xx-large' {
+		@media only screen and (min-width: 1400px) {
+			@content;
+		}
+	}
+	@else if $breakpoint == 'x-large' {
+		@media only screen and (min-width: 1200px) {
+			@content;
+		}
+	}
+	@else if $breakpoint == 'large' {
+		@media only screen and (min-width: 992px) {
+			@content;
+		}
+	}
+	@else if $breakpoint == 'medium' {
+		@media only screen and (min-width: 768px) {
+			@content;
+		}
+	}
+	@else if $breakpoint == 'small' {
+		@media only screen and (min-width: 576px) {
+			@content;
+		}
+	}
+	@else if $breakpoint == 'x-small' {
+		@media only screen and (max-width: 575px) {
+			@content;
+		}
+	}
+}
+
+@mixin media-min-width($breakpoint) {
+	@media only screen and (min-width: $breakpoint) {
+		@content;
+	}
+}
+
+@mixin media-max-width($breakpoint) {
+	@media only screen and (max-width: $breakpoint) {
+		@content;
+	}
+}
+
+@mixin media-min-height($breakpoint) {
+	@media only screen and(min-height: $breakpoint) {
+		@content;
+	}
+}
+
+@mixin media-max-height($breakpoint) {
+	@media only screen and(max-height: $breakpoint) {
+		@content;
+	}
+}
+
+
+
+

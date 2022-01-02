@@ -1,0 +1,14 @@
+#goToAddForm {
+  @include place-center(flex);
+  gap: $gap-sm;
+
+  background-color: $color-dark;
+  color: white;
+  padding: 0 $padding-sm;
+  border-radius: 30px;
+
+  cursor: pointer;
+  &:hover {
+    filter: brightness(90%);
+  }
+}

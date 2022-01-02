@@ -1,0 +1,17 @@
+#minMaxSidebar {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 280px;
+
+  border-radius: $radius-cirlce;
+  font-size: 18px;
+  box-shadow: $shadow-default;
+
+  transition: transform $transition-fast;
+  z-index: 100;
+  cursor: pointer;
+  &.active {
+    transform: rotate(180deg) translateY(22px) translateX(200px);
+  }
+}

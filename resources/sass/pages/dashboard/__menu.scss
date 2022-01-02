@@ -1,0 +1,41 @@
+#menu {
+  display: grid;
+  gap: $gap-md;
+
+  background: linear-gradient(
+    180deg, #FFFFFF -15.13%, rgba(255, 255, 255, 0) 116.75%
+  );
+  box-shadow: $shadow-default;
+  padding: $padding-md;
+  border-radius: $radius-xxl;
+  h3 {
+    font-size: 24px;
+    color: $color-dark;
+  }
+  a {
+    display: grid;
+    position: relative;
+
+    flex: 1;
+    border-radius: 30px;
+    padding: $padding-md;
+
+    background: white;
+    background-image: url('../images/wave-1.png');
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    &:hover {
+      filter: brightness(90%);
+    }
+
+    span {
+      font-size: 30px;                              
+      font-weight: bold;
+      color: $color-dark;
+    }
+
+    img {
+      justify-self: end;
+    }
+  }
+}

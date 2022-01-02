@@ -1,0 +1,16 @@
+@mixin animation-skeleton() {
+  @include animation(
+    $duration: 2s, 
+    $fill-mode: linear, 
+    $iteration: infinite, 
+    $direction: alternate
+  ) {
+    from {
+      background-color: #cacaca;
+
+    }
+    to {
+      background-color: rgba(231, 231, 231, 0.933);
+    }
+  }
+}

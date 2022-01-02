@@ -1,0 +1,17 @@
+.card-bigest {
+  display: flex;
+  justify-content: space-between;
+  gap: $gap-xxl;
+
+  padding: $padding-md;
+
+  box-shadow: $shadow-default;
+  background: white;
+  
+  border-radius: $radius-xxl;
+
+  flex: 7;
+}
+
+.text-dark { color: $color-dark; }
+.text-primary { color: $color-primary; }

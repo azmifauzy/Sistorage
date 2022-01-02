@@ -1,0 +1,11 @@
+// @mixin grid-col-3($responsive: 'responsive') {
+//   @if $responsive == 'responsive' {
+//     grid-template-columns: repeat(3, 1fr);
+//     @include media('tablet') {
+//       grid-template-columns: repeat(2, 1fr);
+//     }
+//     @include media('phone') {
+//       grid-template-columns: 1fr;
+//     }
+//   }
+// }

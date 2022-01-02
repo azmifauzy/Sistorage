@@ -1,0 +1,50 @@
+.table{
+  $padding-column: 5px;
+  width: 100%;
+  border-collapse: collapse;
+  overflow: auto;
+  max-height: 1000px;
+  thead {
+    background-color: $color-primary;
+    th {
+      padding: $padding-column;
+      color: $color-dark;
+    }
+  }
+
+  tbody {
+    background-color: white;
+    // tr:nth-child(even){ background-color: #f2f2f2; }
+    td {
+      padding: 0 5px;
+      color: $color-dark;
+      a, button {
+        @include place-center(grid);
+        font-weight: bold;
+        font-size: 18px;
+        transition: $transition-fast;
+        background-color: $background-transparent;
+        &[aria-label="edit"] {
+          color: #ff9f43;
+        }
+        &[aria-label="delete"] {
+          color: #ee5253;
+        }
+        &:hover {
+          border: 1px solid $color-primary;
+        }
+        i {
+          display: inline-block;
+        }
+      }
+    }
+  }
+  
+  tfoot {
+    background-color: $color-primary;
+    td {
+      padding: $padding-column;
+      color: $color-dark;
+    }
+  }
+}

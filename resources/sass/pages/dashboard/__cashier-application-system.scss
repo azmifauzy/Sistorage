@@ -1,0 +1,18 @@
+article#cashierApplicationSystem {
+  img.cashier-app-system {
+    @include media('tablet') {
+      width: 250px;
+    }
+  }
+
+  div.cashier-app-system-container {
+    display: grid;
+    gap: $gap-md;
+
+    h3 {
+      font-size: 36px;
+      color: $color-dark;
+    }
+    @import '../../components/anchor-go-to-cashier';
+  }
+}

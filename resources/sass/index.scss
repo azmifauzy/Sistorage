@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Kulim+Park:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import './utils/variables';
+@import './utils/mixins';
+@import './utils/classes';
+@import './lib/Mame';
+@import './components/sidebar';
+@import './components/navbar';
+@import './components/card';
+@import '.components/button-go-to-add-form';
+@import '.components/table';
+@import '.components/data-table';
+@import '.components/form-input';
+
+@include styles-default-reset-tag-all();
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba($color-dark, 0.7);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-corner {
+  background: rgb(170, 170, 170);
+}
+
+
+
+*:focus {
+  border-color: $color-primary;
+  outline-color: $color-primary;
+}
+
+body {
+  font-family: $font-primary;
+}
+
+input, button, a, select {
+  min-height: 44px;
+  min-width: 44px;
+  border: none
+}
+
+main#main {
+  min-height: 100vh;
+  margin-left: $sidebar-size-max;
+  background: $color-light;
+  transition: margin-left $transition-fast;
+  padding: $padding-lg;
+  &.maximize {
+    margin-left: $sidebar-size-min;
+  }
+}
+
+p {
+  margin-bottom: 0!important;
+}
+
+.card-bigest {
+  h3 {
+    color: $color-dark;
+  }
+
+  p {
+    font-size: 30px;
+  }
+
+  span {
+    font-size: 30px;
+    font-weight: bold;
+  }
+}
+
+
+
+@import './pages/auth';
+@import './pages/dashboard/dashboard';
+@import './pages/categories/categories';

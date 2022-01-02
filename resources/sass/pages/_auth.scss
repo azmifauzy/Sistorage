@@ -1,0 +1,36 @@
+@mixin fontLabelAndSwitchStyle($color) {
+  font-size: $sub-heading;
+  font-weight: 600;
+  color: $color;
+  letter-spacing: 0.3px;
+}
+
+#authContainer {
+  .greeting {
+    @include place-center(grid);
+    background-color: $color-background-light;
+    flex: 5;
+    h1 {
+      font-size: 60px;
+      text-align: center;
+      color: $color-primary;
+      font-family: $font-secondary;
+      @include media('tablet') {
+        font-size: 50px;
+      }
+      @include media('phone') {
+        font-size: 35px;
+      }
+    }
+    img {
+      width: 600px;
+      @include media('tablet') {
+        width: 500px;
+      }
+      @include media('phone') {
+        width: 350px;
+      }
+    }
+  }
+  @import '../components/form-input';
+}

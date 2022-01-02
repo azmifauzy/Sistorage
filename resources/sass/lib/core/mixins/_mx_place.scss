@@ -1,0 +1,25 @@
+@mixin place-center($display) {
+  display: $display;
+  @if $display == grid {
+    place-items: center;
+  }
+  @else if $display == flex {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@mixin place-horizontal-between($display) {
+  display: $display;
+  justify-content: space-between;
+}
+
+@mixin place-horizontal-center($display) {
+  display: $display;
+  justify-content: center;
+}
+
+@mixin place-vertical-center($display) {
+  display: $display;
+  align-items: center;
+}

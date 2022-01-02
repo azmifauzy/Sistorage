@@ -1,0 +1,32 @@
+.dataTables_wrapper {
+  $radius-search-input: 30px;
+
+  .dataTables_length, .dataTables_filter {
+    label {
+      display: flex;
+      align-items: center;
+      gap: $gap-md;
+      color: $color-dark;
+    }
+  }
+
+  .dataTables_length {
+    select {
+      max-width: 100px;
+      border-radius: 10px;
+    }
+  }
+
+  .dataTables_filter {
+    input {
+      border-radius: 10px;
+    }
+  }
+
+  .paginate_button.active {
+    a {
+      background-color: $color-primary!important;
+      border-color: $color-primary;
+    }
+  }
+}

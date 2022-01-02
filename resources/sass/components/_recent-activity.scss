@@ -1,0 +1,47 @@
+article#recentActivity {
+  display: grid;
+  gap: $gap-xl;
+
+  flex: 6;
+  @import './form-search';
+  section {
+    display: grid;
+    gap: $gap-md;
+    
+    background: white;
+    box-shadow: $shadow-default;
+    border-radius: $radius-xxl;
+
+    padding: $padding-md;
+    h3 {
+      color: $color-primary;
+      font-size: 24px;
+    }
+
+    .activity-container {
+      display: grid;
+      gap: $gap-sm;
+
+      height: 160px;
+      
+      overflow-y: auto;
+      .activity {
+        box-shadow: $shadow-sm;
+        padding: 2px;
+        background: white;
+        cursor: pointer;
+        &:hover {
+          filter: brightness(90%);
+        }
+
+        p {
+          font-weight: 500;
+          color: $color-dark;
+        }
+        time {
+          color: $color-primary;
+        }
+      }
+    }
+  }
+}
